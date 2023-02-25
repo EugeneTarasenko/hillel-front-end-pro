@@ -1,4 +1,6 @@
-let name = prompt("What's your name?") || 'stranger';
+let name = prompt("What's your name?");
 
-alert(`Hello, ${name}! How are you?`);
-
+if (name !== null){
+if (!name) alert(`Hello, stranger! How are you?`);
+	else alert(`Hello, ${name}! How are you?`);
+}
