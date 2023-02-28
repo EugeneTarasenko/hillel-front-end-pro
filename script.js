@@ -48,7 +48,7 @@ function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-function getRandomcolor() {
+function getRandomColor() {
   return `rgb(${getRandomNumber(0, 256)}, ${getRandomNumber(0, 256)}, ${getRandomNumber(0, 256)})`;
 }
 
@@ -59,8 +59,8 @@ function generateOneCircle() {
   div.style.borderRadius = '100%';
   div.style.width = size + 'px';
   div.style.aspectRatio = '1/1';
-  div.style.border = `solid ${size * .1}px ${getRandomcolor()}`;
-  div.style.backgroundColor = `${getRandomcolor()}`;
+  div.style.border = `solid ${size * .1}px ${getRandomColor()}`;
+  div.style.backgroundColor = `${getRandomColor()}`;
   document.querySelector('.circlesContainer').appendChild(div);
 }
 
