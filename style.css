@@ -1,0 +1,16 @@
+button {
+  font-size: 1.5rem;
+  margin: .5rem;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+button:active {
+  transform: scale(.95);
+}
+
+.circlesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
