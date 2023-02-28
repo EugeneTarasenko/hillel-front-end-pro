@@ -44,6 +44,10 @@ function mathOperation() {
   if (mathSign === '/') alert(`${firstNumber} / ${secondNumber} = ${firstNumber / secondNumber}`);
 }
 
+
+const removeCirclesBtn = document.querySelector('#btn-4');
+removeCirclesBtn.style.display = 'none';
+
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
@@ -62,6 +66,7 @@ function generateOneCircle() {
   div.style.border = `solid ${size * .1}px ${getRandomColor()}`;
   div.style.backgroundColor = `${getRandomColor()}`;
   document.querySelector('.circlesContainer').appendChild(div);
+  removeCirclesBtn.style.display = 'inline-block';
 }
 
 function generateManyCircle() {
@@ -85,5 +90,6 @@ document.querySelector('#btn-3').addEventListener('click', generateManyCircle);
 
 document.querySelector('#btn-4').addEventListener('click', () => {
   document.querySelector('.circlesContainer').innerHTML = '';
+  removeCirclesBtn.style.display = 'none';
 });
 
