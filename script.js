@@ -77,7 +77,7 @@ function generateManyCircle() {
     if (quantity === '' || !Number.isInteger(+quantity) || +quantity <= 0) alert('❌ Wrong input. Try again')
   } while (quantity === '' || !Number.isInteger(+quantity) || +quantity <= 0);
 
-  for (let i = 0; i <= quantity; i++) {
+  for (let i = 0; i < quantity; i++) {
     generateOneCircle();
   }
 }
