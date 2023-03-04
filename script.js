@@ -5,7 +5,7 @@ let email = prompt('Enter your email:').replaceAll(/\s+/g, '').toLowerCase();
 if (!email.includes('@')) email = `not valid email <b>${email}</b> (symbol @ not exist)`;
 else if (email.indexOf('@') === 0) email = `not valid email <b>${email}</b> (symbol @ find in first place)`;
 else if (email.indexOf('@') === email.length - 1) email = `not valid email <b>${email}</b> (symbol @ find in last place)`;
-else email = `<b>${name}</b>`;
+else email = `<b>${email}</b>`;
 
 const birthYear = +prompt('Enter your year of birth:').replaceAll(/\s+/g, '');
 const age = new Date().getFullYear() - birthYear;
