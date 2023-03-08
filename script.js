@@ -15,15 +15,24 @@ if (!userEmail.includes('@')) {
 
 const MAX_AGE = 100;
 const MIN_AGE = 6;
+const CURRENT_YEAR = new Date().getFullYear();
+let yearOfBirth;
 let userAge;
 
+function getNumber(message) {
+  let number;
+  do {
+    number = prompt(message).replaceAll(/\s+/g, '');
+    if (!/^\d+$/.test(number)) alert('❌ Wrong characters. Only digits allowed. Try again.')
+  } while (!/^\d+$/.test(number))
+  return +number;
+}
+
 do {
-  userAge = new Date().getFullYear() - +prompt('Enter your year of birth:').replaceAll(/\s+/g, '')
-  if (userAge > MAX_AGE) alert(`Your year of birth can't be less than ${new Date().getFullYear() - MAX_AGE}.`)
-  if (userAge < MIN_AGE) alert(`Your year of birth should be at least ${new Date().getFullYear() - MIN_AGE}. If you're less, you can't register.`)
+  userAge = CURRENT_YEAR - getNumber('Enter the year when you were born:');
+  if (userAge > MAX_AGE || userAge < MIN_AGE) alert(`❌ Wrong age. You must be at least ${MIN_AGE} and no more than ${MAX_AGE} years old. Try again.`)
 }
 while (userAge > MAX_AGE || userAge < MIN_AGE)
-
 
 const list = document.createElement('ul');
 document.querySelector('body').appendChild(list);
