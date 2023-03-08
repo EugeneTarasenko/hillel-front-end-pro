@@ -13,10 +13,19 @@ if (!userEmail.includes('@')) {
   emailEntry = `not valid email <b>${userEmail}</b> (symbol @ find in last place)`;
 } else { emailEntry = `<b>${userEmail}</b>`; }
 
-const userBirthYear = +prompt('Enter your year of birth:').replaceAll(/\s+/g, '');
-const userAge = new Date().getFullYear() - userBirthYear;
+const MAX_AGE = 100;
+const MIN_AGE = 6;
+let userAge;
 
-const list = document.createElement('ul')
+do {
+  userAge = new Date().getFullYear() - +prompt('Enter your year of birth:').replaceAll(/\s+/g, '')
+  if (userAge > MAX_AGE) alert(`Your year of birth can't be less than ${new Date().getFullYear() - MAX_AGE}.`)
+  if (userAge < MIN_AGE) alert(`Your year of birth should be at least ${new Date().getFullYear() - MIN_AGE}. If you're less, you can't register.`)
+}
+while (userAge > MAX_AGE || userAge < MIN_AGE)
+
+
+const list = document.createElement('ul');
 document.querySelector('body').appendChild(list);
 const listItem1 = document.createElement('li');
 const listItem2 = document.createElement('li');
