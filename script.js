@@ -20,7 +20,7 @@ function calculateSumOfFactorials() {
   let stride;
   do {
     stride = getNumber(`Enter stride number. \n⚠️ Notice: It should be bigger than 0.`);
-    if (stride <= 0) alert(`❌ Number ${stride} is less or equels 0. Try again.`)
+    if (stride <= 0) alert(`❌ Number ${stride} is less or equals 0. Try again.`)
   } while (stride <= 0)
 
   const numberArr = [];
