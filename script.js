@@ -7,7 +7,6 @@ function getNumber(message) {
   return +number;
 }
 
-
 function calculateSumOfFactorials() {
   const firstNumber = getNumber('Enter first number:');
 
@@ -40,3 +39,7 @@ function calculateSumOfFactorials() {
 
   alert(`First number: ${firstNumber};\nSecond number ${secondNumber};\nStride number: ${stride};\nNumbers included: ${numberArr};\nSum of factorials: ${sumOfFactorials}`);
 }
+
+document.querySelector('.main-btn').addEventListener('click', calculateSumOfFactorials);
+
+calculateSumOfFactorials();
