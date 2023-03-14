@@ -1,0 +1,19 @@
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#main-btn {
+  font-size: 2rem;
+  padding: .5em;
+  cursor: pointer;
+  transition: .1s;
+}
+
+#main-btn:active {
+  transform: scale(.95);
+}
