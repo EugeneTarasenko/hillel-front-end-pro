@@ -40,7 +40,7 @@ for (let i = 0; i < 4; i++) {
       break;
   }
 
-  for (let j = 6; j <= 14; j++) {
+  for (let j = 2; j <= 14; j++) {
 
     let valueImg;
 
