@@ -6,8 +6,9 @@ const fontNerkoOne = new FontFace("Nerko One", "url(NerkoOne-Regular.ttf)", {
 document.fonts.add(fontNerkoOne);
 
 const body = document.querySelector('body');
-body.style.backgroundColor = 'green';
+body.style.backgroundColor = '#55aa55';
 body.style.fontFamily = 'Nerko One';
+body.style.color = '#353c4d';
 body.style.lineHeight = 1;
 
 const main = document.createElement('div');
