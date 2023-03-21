@@ -7,14 +7,18 @@ document.fonts.add(fontNerkoOne);
 
 const body = document.querySelector('body');
 body.style.backgroundColor = 'green';
-body.style.minHeight = '100vh';
 body.style.fontFamily = 'Nerko One';
 body.style.lineHeight = 1;
 
-body.style.display = 'flex';
-body.style.flexWrap = 'wrap';
-body.style.gap = '.7rem';
-body.style.justifyContent = 'center';
+const main = document.createElement('div');
+body.appendChild(main)
+
+document.querySelector('body>div').classList.add('main')
+main.style.display = 'flex';
+main.style.flexWrap = 'wrap';
+main.style.gap = '.7rem';
+main.style.justifyContent = 'center';
+main.style.padding = '1rem';
 
 for (let i = 0; i < 4; i++) {
 
@@ -37,7 +41,7 @@ for (let i = 0; i < 4; i++) {
 
   for (let j = 6; j <= 14; j++) {
 
-    let valueImg = '';
+    let valueImg;
 
     switch (j) {
       case 11:
@@ -52,6 +56,8 @@ for (let i = 0; i < 4; i++) {
       case 14:
         valueImg = `./images/${suit}.svg`;
         break;
+      default:
+        valueImg = '';
     }
 
     const cardJS = document.createElement('div');
@@ -66,14 +72,13 @@ for (let i = 0; i < 4; i++) {
     cardJS.style.backgroundImage = `url('${valueImg}'), url('./images/${suit}.svg'), url('./images/${suit}-r.svg')`;
     cardJS.style.backgroundSize = '50%, 14%, 14%';
     cardJS.style.backgroundPosition = 'center, top 1.2rem left .1rem, bottom 1.2rem right .1rem';
-    cardJS.style.transition = 'transform .1s';
 
     cardJS.setAttribute('data-value', j);
-    body.appendChild(cardJS);
+    main.appendChild(cardJS);
   }
 }
 
-const cards = document.querySelectorAll('div');
+const cards = document.querySelectorAll('.main>div');
 
 cards.forEach(card => {
 
@@ -96,7 +101,7 @@ cards.forEach(card => {
 const verticalIndentation = '.1rem';
 const horizontalIndentation = '.1rem';
 
-const valueTopArr = document.querySelectorAll('div>:first-child');
+const valueTopArr = document.querySelectorAll('.main>div> :first-child');
 valueTopArr.forEach(elem => {
 
   elem.style.margin = 0;
@@ -105,7 +110,7 @@ valueTopArr.forEach(elem => {
   elem.style.left = horizontalIndentation;
 })
 
-const valueBottomArr = document.querySelectorAll('div>:last-child');
+const valueBottomArr = document.querySelectorAll('.main>div> :last-child');
 valueBottomArr.forEach(elem => {
   elem.style.margin = 0;
   elem.style.position = 'absolute';
