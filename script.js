@@ -33,10 +33,10 @@ for (let i = 0; i < 4; i++) {
       suit = 'diamonds';
       break;
     case 2:
-      suit = 'hearts';
+      suit = 'spades';
       break;
     case 3:
-      suit = 'spades';
+      suit = 'hearts';
       break;
   }
 
