@@ -22,4 +22,3 @@ function removeElement2(array, num) {
 console.log("First function output: " + removeElement1(array, 2));
 console.log("Second function output: " + removeElement2(array, 2));
 console.log("Initial intact array: " + array);
-
