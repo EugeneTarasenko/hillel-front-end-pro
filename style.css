@@ -1,0 +1,7 @@
+pre {
+  display: inline-block;
+}
+
+.fontMonospace {
+  font-family: monospace;
+}

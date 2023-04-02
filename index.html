@@ -5,9 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
     <title>Document</title>
   </head>
   <body>
+    <main>
+      <h2>Code of the function variant #1:</h2>
+      <pre><code class="language-javascript">
+function main1(a = 2, b = 3, c) {
+  return (c && typeof c == "function") ? c(sum(a, b)) : sum(a, b);
+}
+      </code></pre>
+
+      <h2>Code of the function variant #2:</h2>
+      <pre><code class="language-javascript">
+function main2() {
+  const a = arguments[0] || 2;
+  const b = arguments[1] || 3;
+        
+  return (!arguments[2]) ? sum(a, b) : arguments[2](sum(a, b));
+}
+      </code></pre>
+
+      <h3>Function <span class="fontMonospace">sum()</span>:</h3>
+      <pre><code class="language-javascript">
+function sum(a, b) {
+  return a + b;
+}
+      </code></pre>
+
+      <h3>Function <span class="fontMonospace">makeDouble()</span>:</h3>
+      <pre><code class="language-javascript">
+function makeDouble(arg) {
+  return arg * 2;
+}
+      </code></pre>
+    </main>
     <script src="./script.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
   </body>
 </html>
