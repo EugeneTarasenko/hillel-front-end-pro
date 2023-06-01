@@ -31,6 +31,6 @@ const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
 const key1 = generateKey(16, characters);
 const key2 = generateKey(16, characters);
 
-console.log(key1);
-console.log(key2);
+console.log(key1); // zkxvadkz55bw06e0
+console.log(key2); // jq0afjjx2g4bldoj
 ```
